@@ -1,0 +1,19 @@
+﻿@model MigrationTest.Models.Employee
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Chiefs";
+}
+
+  <div class="display-label"><b>Name</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmployeeName)
+    </div>
+ 
+    
+    <div class="display-label"><b>Chiefs</b></div>
+    <ul>
+        @foreach (MigrationTest.Models.Chief c in Model.Chiefs)
+        {
+            <li>@c.ChiefName</li>
+        }
+    </ul>

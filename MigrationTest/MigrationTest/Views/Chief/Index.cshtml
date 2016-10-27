@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MigrationTest.Models.Chief>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Chiefs";
+}
+
+<table> 
+    <tr> 
+
+        <th>Id Chief</th> 
+         <th>Name</th> 
+        <th></th> 
+
+                <th></th> 
+    </tr> 
+    
+@foreach (var item in Model) { 
+    <tr> 
+         <td> 
+            @Html.DisplayFor(modelItem => item.ChiefID) 
+        </td>
+        <td> 
+            @Html.DisplayFor(modelItem => item.ChiefName) 
+        </td> 
+ 
+        <td> 
+            @Html.ActionLink("Employee", "EmpList", "Chief", new { id=item.ChiefID }, null)
+        </td> 
+         
+      
+    </tr> 
+} 
+    
+    
+    
+ 
+</table>
