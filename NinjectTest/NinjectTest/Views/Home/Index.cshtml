@@ -1,0 +1,49 @@
+﻿@model IEnumerable<NinjectTest.Models.Student>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Value</title>
+    </head>
+    <body>
+       
+<table> 
+    <tr> 
+
+        <th>Student</th> 
+         <th>Math Mark </th> 
+                <th>Chemistry Mark  </th> 
+                        <th>Biology Mark </th> 
+        <th>Art Mark </th>
+    </tr> 
+ 
+@foreach (var item in Model) { 
+    <tr> 
+         <td> 
+            @Html.DisplayFor(modelItem => item.Name) 
+        </td>
+        <td> 
+            @Html.DisplayFor(modelItem => item.MathMark) 
+        </td> 
+                <td> 
+            @Html.DisplayFor(modelItem => item.ChemistryMark) 
+        </td> 
+
+                <td> 
+            @Html.DisplayFor(modelItem => item.BiologyMark) 
+        </td> 
+                <td> 
+            @Html.DisplayFor(modelItem => item.ArtMark) 
+        </td> 
+ 
+    </tr> 
+}
+    
+    
+ 
+</table>
+    </body>
+</html>
